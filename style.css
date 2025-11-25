@@ -1,0 +1,28 @@
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.menu-container {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.quote-box {
+    margin-top: 20px;
+    padding: 15px;
+    color: white;
+}
+
+.quote {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.author {
+    font-style: italic;
+    margin-top: 5px;
+    opacity: 0.8;
+}

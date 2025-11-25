@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AR - Expectativas 2026</title>
+
+    <!-- AR.js + A-Frame -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.js"></script>
+
+    <!-- Bootstrap opcional -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="menu-container bg-dark p-3 text-center">
+    <h2 class="text-white">Escolha um sentimento para 2026:</h2>
+
+    <div class="btn-group mt-3">
+        <button class="btn btn-danger" onclick="showContent('amor')">❤️ Amor</button>
+        <button class="btn btn-success" onclick="showContent('esperanca')">🌱 Esperança</button>
+        <button class="btn btn-primary" onclick="showContent('sucesso')">🚀 Sucesso</button>
+        <button class="btn btn-info" onclick="showContent('paz')">🕊️ Paz</button>
+    </div>
+</div>
+
+<!-- CENA AR -->
+<a-scene embedded arjs="detectionMode: mono; sourceType: webcam;">
+    <a-marker preset="hiro">
+        <!-- Modelo carregado dinamicamente via script.js -->
+        <a-entity id="model" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+
+<!-- FRASE -->
+<div id="quoteBox" class="quote-box text-center">
+    <p id="quoteText" class="quote"></p>
+    <p id="quoteAuthor" class="author"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
